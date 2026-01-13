@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Map to your EmailJS template variables
         const templateParams = {
+          to_email: "mavagutech@gmail.com",
           from_name: name,
           reply_to: email,
           subject: subject,
