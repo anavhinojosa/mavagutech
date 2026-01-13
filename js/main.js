@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe service cards and other elements for animation
-    const animatedElements = document.querySelectorAll('.service-card, .contact-item, .stat');
+    const animatedElements = document.querySelectorAll('.service-card, .contact-item');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';

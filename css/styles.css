@@ -30,10 +30,6 @@
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
     font-size: 16px;
@@ -324,17 +320,7 @@ section {
     box-shadow: var(--shadow-xl);
 }
 
-.service-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    color: white;
-}
+
 
 .service-title {
     margin-bottom: 1rem;
@@ -357,30 +343,6 @@ section {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     line-height: 1.8;
-}
-
-.about-stats {
-    display: flex;
-    gap: 3rem;
-    margin-top: 2.5rem;
-    padding-top: 2.5rem;
-    border-top: 1px solid var(--border-color);
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.stat-label {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
 }
 
 .about-values {
@@ -436,18 +398,6 @@ section {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
-}
-
-.contact-icon {
-    width: 48px;
-    height: 48px;
-    background-color: var(--primary-color);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    flex-shrink: 0;
 }
 
 .contact-item h4 {
@@ -690,18 +640,3 @@ section {
 .hero-content {
     animation: fadeInUp 0.8s ease-out;
 }
-
-/* ===== Utility Classes ===== */
-.text-center {
-    text-align: center;
-}
-
-.mt-1 { margin-top: 0.5rem; }
-.mt-2 { margin-top: 1rem; }
-.mt-3 { margin-top: 1.5rem; }
-.mt-4 { margin-top: 2rem; }
-
-.mb-1 { margin-bottom: 0.5rem; }
-.mb-2 { margin-bottom: 1rem; }
-.mb-3 { margin-bottom: 1.5rem; }
-.mb-4 { margin-bottom: 2rem; }
