@@ -1,0 +1,17 @@
+/* style.css */
+
+.navbar {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
