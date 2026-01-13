@@ -15,3 +15,10 @@
 .navbar a:hover {
     text-decoration: underline;
 }
+.contact-form {
+    max-width: 600px;   /* only affects the form */
+}
+
+.form-group {
+    margin-bottom: 15px;  /* only affects each field container */
+}
