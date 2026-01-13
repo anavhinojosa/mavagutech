@@ -1,73 +1,241 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mavagu Tech LLC</title>
-     <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Mavagu Tech LLC - Innovative technology solutions for individuals and businesses. We specialize in software development, IT consulting, AI tools, automation, and PC services." />
+  <meta name="keywords" content="technology, software development, IT consulting, digital transformation, AI tools, business automation, PC repair, gaming PC, Mavagu Tech" />
+
+  <title>Mavagu Tech LLC | Innovative Technology Solutions</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <h1>Mavagu Tech</h1>
-    <!-- Navigation bar -->
-        <nav class="navbar">
-        <a href="index.html">Home</a> <!-- home page -->
-        <a href="about.html">About</a> 
-        <a href="services.html">Services</a> 
-        <a href="contact.html">Contact</a>
-    </nav>
-    <h2>Innovative Technology Solutions for Small Businesses</h2>
-    <p>Let us help you take your business to the next level with technology solutions for small businesses.</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <span class="logo-text">Mavagu</span><span class="logo-accent">Tech</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link cta-button">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <h2>About Us</h2>
-    <p>
-        Mavagu Tech LLC is a startup dedicated to helping small businesses modernize and grow
-        through affordable, practical digital solutions. Based in Laredo, Texas, our team specializes
-        in software development, business automation, on-site IT services, and AI-powered tools designed
-        to make everyday operations more efficient and easier to manage.
-    </p>
-    <p>
-        Our team brings experience as software engineers at companies such as Amazon, Bank of America,
-        and L3Harris, along with degrees in Computer Engineering and a background in applied research.
-        This allows us to deliver high-quality solutions to the unique needs of local businesses.
-    </p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Innovative Technology Solutions for Individuals and Small Businesses</h1>
+        <p class="hero-subtitle">
+          Let us help you take your business or personal technology to the next level with smart, reliable solutions.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get Started</a>
+          <a href="#services" class="btn btn-secondary">Our Services</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
 
-    <h2>Our values</h2>
-    <p>Innovation, Integrity, Excellence, and Partnership</p>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 class="section-title">About Mavagu Tech</h2>
+          <p class="about-description">
+            Mavagu Tech LLC is a startup dedicated to helping small businesses modernize and grow
+            through affordable, practical digital solutions, while also helping everyday users with PC services.
+            Based in Laredo, Texas, our team specializesin software development, business automation, on-site IT services, 
+            and AI-powered tools designed to make everyday operations more efficient and easier to manage.
+          </p>
+          <p class="about-description">
+           Our team brings experience as software engineers at companies such as Amazon, Bank of America, and L3Harris, 
+           along with degrees in Computer Engineering and a background in applied research. This allows us to deliver high-quality 
+           solutions to the unique needs of local businesses.
+          </p>
 
-    <h2>Our Services</h2>
-    <p>Software development, digital transformation, IT consulting, on-site IT services, and managed services</p>
+          <div class="about-values">
+            <h3>Our Values</h3>
+            <ul class="values-list">
+              <li>
+                <strong>Innovation</strong>
+                <span>We embrace new technologies and creative solutions</span>
+              </li>
+              <li>
+                <strong>Integrity</strong>
+                <span>We build trust through transparency and honesty</span>
+              </li>
+              <li>
+                <strong>Excellence</strong>
+                <span>We strive for the highest quality in everything we do</span>
+              </li>
+              <li>
+                <strong>Partnership</strong>
+                <span>We succeed when our clients succeed</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2>Get in Touch</h2>
-    <p>Ready to start your new project? Let us help you!</p>
-        <form action="" method="post" class="contact-form">
-        <div class="form-group">
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle"> Technology solutions made for your needs</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 class="service-title">Software Development</h3>
+          <p class="service-description">
+            Custom software solutions designed to streamline your operations and drive business growth.
+            From web applications to mobile app development.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">IT Consulting</h3>
+          <p class="service-description">
+            Strategic technology guidance to help you make informed decisions.
+            We assess, plan, and implement solutions that align with your goals.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">AI Tools & Automation</h3>
+          <p class="service-description">
+            Automate workflows, integrate AI tools, and build smarter systems that save time and improve consistency across your business.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">Managed Services</h3>
+          <p class="service-description">
+            Focus on your core business while we handle your IT.
+            Monitoring, maintenance, and support to keep you running smoothly.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">PC Support & Performance</h3>
+          <p class="service-description">
+            PC troubleshooting, upgrades, and performance tuning — including gaming-focused optimization for smoother, more responsive gameplay.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Ready to start your next project? Let's talk about how we can help.</p>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div>
+              <h4>Email</h4>
+              <p>mavagutech@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div>
+              <h4>Phone</h4>
+              <p>(555) 123-4567</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div>
+              <h4>Location</h4>
+              <p>Laredo, Texas</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" required/>
-        </div>
-        <div class="form-group">
+            <input type="text" id="name" name="name" required placeholder="Your name" />
+          </div>
+          <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" required/>
-        </div>
-        <div class="form-group">
+            <input type="email" id="email" name="email" required placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" name="subject" id="subject" required/>
-        </div>
-        <div class="form-group">
+            <input type="text" id="subject" name="subject" required placeholder="How can we help?" />
+          </div>
+          <div class="form-group">
             <label for="message">Message</label>
-            <textarea name="message" id="message" required></textarea>
-        </div>
-        <div class="form-group">
-            <button type="submit">Send Message</button>
-        </div>
-    </form>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about what you need..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <p>
-        For the latest updates, follow our Facebook page:
-        <a href="https://www.facebook.com/share/17pVZgQMyq/?mibextid=wwXIfr" target="_blank">
-            <strong>Mavagu Tech</strong>
-        </a>
-    </p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-text">Mavagu</span><span class="logo-accent">MavaguTech LLC</span>
+          </a>
+          <p>Innovative technology solutions for everyday users and businesses.</p>
+        </div>
 
-    <footer>
-        <p>© 2026 Mavagu Tech LLC. All rights reserved.</p>
-    </footer>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Software Development</a></li>
+            <li><a href="#services">IT Consulting</a></li>
+            <li><a href="#services">AI Tools & Automation</a></li>
+            <li><a href="#services">Managed Services</a></li>
+            <li><a href="#services">PC Support & Performance</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mavagu Tech LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
