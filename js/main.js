@@ -60,7 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // === EmailJS CONFIG (replace these 3 values) ===
   const EMAILJS_PUBLIC_KEY = 'Dix7lm4DQPSv9IOOc';
   const EMAILJS_SERVICE_ID = 'service_0888kdg';
-  const EMAILJS_TEMPLATE_ID = 'template_5o0awyi';
+
+  const TEMPLATE_ID_OWNER = 'template_l6tuv2t';//owner
+  const TEMPLATE_ID_THANKS = 'template_5o0awyi';//thank-you
 
   // Load EmailJS SDK if it isn't already loaded (keeps setup simple)
   function loadEmailJSSDK() {
@@ -116,20 +118,27 @@ document.addEventListener('DOMContentLoaded', function () {
           window.__emailjsReady = true;
         }
 
-        // Map to your EmailJS template variables
-        const templateParams = {
-          to_email: "mavagutech@gmail.com",
+        // Params for the email YOU receive
+        const ownerParams = {
+          to_email: "anavhinojosa0@gmail.com",
           from_name: name,
           reply_to: email,
           subject: subject,
           message: message
         };
 
-        await window.emailjs.send(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_TEMPLATE_ID,
-          templateParams
-        );
+        // Params for the THANK-YOU email the USER receives
+        const userParams = {
+          to_email: email,             
+          from_name: name,              
+          subject: subject              
+        };
+
+        // Send email to you (owner notification)
+        await emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_ID_OWNER, ownerParams);
+
+        // Send confirmation email to the user
+        await emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_ID_THANKS, userParams);
 
         showNotification('Thank you! Your message has been sent.', 'success');
         contactForm.reset();
