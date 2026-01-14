@@ -1,22 +1,19 @@
-// Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function () {
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  // Toggle mobile menu
-  navToggle.addEventListener('click', function () {
-    navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active');
-  });
+// Toggle mobile menu (use pointerdown for iOS Safari reliability)
+navToggle.addEventListener('pointerdown', function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  navMenu.classList.toggle('active');
+  navToggle.classList.toggle('active');
+});
 
   // Close mobile menu when a link is clicked
-  navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-      navMenu.classList.remove('active');
-      navToggle.classList.remove('active');
-    });
+navLinks.forEach(link => {
+  link.addEventListener('pointerdown', function () {
+    navMenu.classList.remove('active');
+    navToggle.classList.remove('active');
   });
+});
+
 
   // Close mobile menu when clicking outside
   document.addEventListener('click', function (e) {
@@ -224,4 +221,4 @@ document.addEventListener('DOMContentLoaded', function () {
     el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
     observer.observe(el);
   });
-});
+
