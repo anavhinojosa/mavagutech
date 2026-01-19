@@ -1,80 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>About Mavagu Tech</title>
-<link rel="stylesheet" href="css/about.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <meta name="description" content="Learn more about Mavagu Tech LLC — our mission, experience, and values." />
+  <title>About | Mavagu Tech</title>
 
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-      <div class="nav-container">
-        <strong>Mavagu Tech</strong>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="#">Contact</a>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navigation (matches index.html) -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Mavagu Tech Home">
+        <img src="images/logo.png" alt="Mavagu Tech" class="logo-img" />
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="service.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <main class="page">
+    <section class="about">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title">About Mavagu Tech</h1>
+          <p class="section-subtitle">
+            Practical, affordable technology solutions for small businesses and everyday users.
+          </p>
         </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-description">
+              Mavagu Tech LLC is a startup dedicated to helping small businesses modernize and grow through
+              affordable, practical digital solutions, while also helping everyday users with PC services.
+              Based in Laredo, Texas, our team specializes in software development, business automation,
+              on-site IT services, and AI-powered tools designed to make everyday operations more efficient
+              and easier to manage.
+            </p>
+
+            <p class="about-description">
+              Our team brings experience as software engineers at companies such as Bank of America,
+              and L3Harris, along with degrees in Computer Engineering and a background in applied research.
+              This allows us to deliver high-quality solutions to the unique needs of local businesses.
+            </p>
+
+            <div class="hero-cta">
+              <a href="service.html" class="btn btn-secondary">Explore Our Services</a>
+              <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="about-values">
+            <h3>Our Values</h3>
+            <ul class="values-list">
+              <li>
+                <strong>Innovation</strong>
+                <span>We embrace new technologies and creative solutions.</span>
+              </li>
+              <li>
+                <strong>Integrity</strong>
+                <span>We build trust through transparency and honesty.</span>
+              </li>
+              <li>
+                <strong>Excellence</strong>
+                <span>We strive for the highest quality in everything we do.</span>
+              </li>
+              <li>
+                <strong>Partnership</strong>
+                <span>We succeed when our clients succeed.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (matches index.html) -->
+  <footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Mavagu Tech Home">
+          <span class="logo-text">Mavagu</span><span class="logo-accent">Tech</span>
+        </a>
+        <p>Innovative technology solutions for everyday users and businesses.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service.html">Software Development</a></li>
+          <li><a href="service.html">IT Consulting</a></li>
+          <li><a href="service.html">AI Tools & Automation</a></li>
+          <li><a href="service.html">Managed Services</a></li>
+          <li><a href="service.html">PC Support & Performance</a></li>
+        </ul>
       </div>
     </div>
 
-    <!-- PAGE CONTENT -->
-    <div class="page-content">
-      <div class="about-container">
-        <h1>About Mavagu Tech</h1>
-
-        <p class="about-description">
-          Mavagu Tech LLC is a startup dedicated to helping small businesses
-          modernize and grow through affordable, practical digital solutions,
-          while also helping everyday users with PC services. Based in Laredo,
-          Texas, our team specializes in software development, business
-          automation, on-site IT services, and AI-powered tools designed to make
-          everyday operations more efficient and easier to manage.
-        </p>
-
-        <p class="about-description">
-          Our team brings experience as software engineers at companies such as
-          Amazon, Bank of America, and L3Harris, along with degrees in Computer
-          Engineering and a background in applied research. This allows us to
-          deliver high-quality solutions to the unique needs of local
-          businesses.
-        </p>
-
-        <div class="values-box">
-  <h2>Our Values</h2>
-
-  <div class="values-grid">
-    <div class="value-card">
-      <strong>Innovation</strong>
-      <p>We embrace new technologies and creative solutions</p>
-    </div>
-
-    <div class="value-card">
-      <strong>Integrity</strong>
-      <p>We build trust through transparency and honesty</p>
-    </div>
-
-    <div class="value-card">
-      <strong>Excellence</strong>
-      <p>We strive for the highest quality in everything we do</p>
-    </div>
-
-    <div class="value-card">
-      <strong>Partnership</strong>
-      <p>We succeed when our clients succeed</p>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mavagu Tech LLC. All rights reserved.</p>
     </div>
   </div>
-</div>
+</footer>
 
-    </div>
-  </body>
+
+  <script src="js/main.js"></script>
+</body>
 </html>

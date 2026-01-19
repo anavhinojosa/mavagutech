@@ -1,72 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>About Mavagu Tech</title>
-<link rel="stylesheet" href="css/about.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <meta name="description" content="Services offered by Mavagu Tech LLC — software, IT consulting, automation, managed services, and PC support." />
+  <title>Services | Mavagu Tech</title>
 
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-      <div class="nav-container">
-        <strong>Mavagu Tech</strong>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="#">Contact</a>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navigation (matches index.html) -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Mavagu Tech Home">
+        <img src="images/logo.png" alt="Mavagu Tech" class="logo-img" />
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="service.html" class="nav-link active">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section class="services">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title">Our Services</h1>
+          <p class="section-subtitle">Technology solutions made for your needs</p>
         </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <h3 class="service-title">Software Development</h3>
+            <p class="service-description">
+              Custom software solutions designed to streamline your operations and drive business growth.
+              From web applications to mobile app development.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3 class="service-title">IT Consulting</h3>
+            <p class="service-description">
+              Strategic technology guidance to help you make informed decisions.
+              We assess, plan, and implement solutions that align with your goals.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3 class="service-title">AI Tools & Automation</h3>
+            <p class="service-description">
+              Automate workflows, integrate AI tools, and build smarter systems that save time and improve consistency across your business.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3 class="service-title">Managed Services</h3>
+            <p class="service-description">
+              Focus on your business while we handle your IT.
+              Monitoring, maintenance, and support to keep you running smoothly.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3 class="service-title">PC Support & Performance</h3>
+            <p class="service-description">
+              PC troubleshooting, upgrades, and performance tuning including gaming-focused optimization for smoother, more responsive gameplay.
+            </p>
+          </div>
+        </div>
+
+        <div class="services-cta">
+          <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Mavagu Tech Home">
+          <span class="logo-text">Mavagu</span><span class="logo-accent">Tech</span>
+        </a>
+        <p>Innovative technology solutions for everyday users and businesses.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service.html">Software Development</a></li>
+          <li><a href="service.html">IT Consulting</a></li>
+          <li><a href="service.html">AI Tools & Automation</a></li>
+          <li><a href="service.html">Managed Services</a></li>
+          <li><a href="service.html">PC Support & Performance</a></li>
+        </ul>
       </div>
     </div>
 
-    <!-- PAGE CONTENT -->
-    <div class="page-content">
-      <div class="about-container">
-        <h1>Our Services</h1>
-        <p>Technology solutions made for your needs</p>
-
-        <div class="values-box">
-  <h2>Services</h2>
-
-  <div class="values-grid">
-    <div class="value-card">
-      <strong>Software Development</strong>
-      <p>Custom software solutions designed to streamline your operations and drive business growth. From web applications to mobile app development.</p>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mavagu Tech LLC. All rights reserved.</p>
     </div>
-
-    <div class="value-card">
-      <strong>IT Consulting</strong>
-      <p>Strategic technology guidance to help you make informed decisions. We assess, plan, and implement solutions that align with your goals.
-
-</p>
-    </div>
-
-    <div class="value-card">
-      <strong>AI Tools & Automation</strong>
-      <p>Automate workflows, integrate AI tools, and build smarter systems that save time and improve consistency across your business.</p>
-    </div>
-
-    <div class="value-card">
-      <strong>Managed Services</strong>
-      <p>Focus on your core business while we handle your IT. Monitoring, maintenance, and support to keep you running smoothly.</p>
-    </div>
-
-    <div class="value-card">
-        <strong>PC Support & Performance</strong>
-        <p>PC troubleshooting, upgrades, and performance tuning including gaming-focused optimization for smoother, more responsive gameplay.</p>
-    </div>
-    
   </div>
-</div>
+</footer>
 
-    </div>
-  </body>
-</html>
+
+  <script src="js/main.js"></script>

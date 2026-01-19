@@ -42,11 +42,7 @@ navLinks.forEach(link => {
     });
   });
 
-<<<<<<< HEAD
   // Navbar shadow on scroll ok
-=======
-  // Navbar shadow on scroll
->>>>>>> origin/master
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', function () {
     navbar.style.boxShadow =

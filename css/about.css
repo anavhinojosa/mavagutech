@@ -11,6 +11,10 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-primary);
 }
+.nav-links a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
 
 a {
     text-decoration: none;
