@@ -3,26 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <meta name="description" content="Mavagu Tech LLC - Innovative technology solutions for individuals and businesses. We specialize in software development, IT consulting, AI tools, automation, and PC services." />
   <meta name="keywords" content="technology, software development, IT consulting, digital transformation, AI tools, business automation, PC repair, gaming PC, Mavagu Tech" />
-
   <title>Mavagu Tech LLC | Innovative Technology Solutions</title>
 
-  <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
 <body>
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="container">       <img src="images/logo.png" alt="Mavagu Tech" class="logo-img" />
-      </a>
-
+    <div class="container">
       <a href="index.html" class="logo" aria-label="Mavagu Tech Home">
- 
+        <img src="images/logo.png" alt="Mavagu Tech" class="logo-img" />
+      </a>
 
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="hamburger"></span>
@@ -46,118 +45,224 @@
           Let us help you take your business or personal technology to the next level with smart, reliable solutions.
         </p>
         <div class="hero-cta">
-          <a href="#services" class="btn btn-secondary">Our Services</a>
+          <a href="#services" class="btn btn-primary">Get Started</a>
+          <a href="#about" class="btn btn-secondary">Learn More</a>
         </div>
       </div>
     </div>
     <div class="hero-bg"></div>
   </section>
 
-  <!-- About Section (summary + CTA to detailed page) -->
-  <section class="about">
+  <!-- About Section -->
+  <section id="about" class="about">
     <div class="container">
       <div class="about-content">
-        <div class="about-text">
-          <h2 class="section-title">About Mavagu Tech</h2>
-
-          <p class="about-description">
-            Mavagu Tech LLC helps individuals and small businesses modernize with practical, affordable tech.
-            We build software, automate workflows, and provide on-site IT and PC services in the Laredo, Texas area.
-          </p>
-
-          <p class="about-description">
-            Our team brings software engineering experience and an applied research background, so you get solutions
-            that are reliable, secure, and designed to scale with your needs.
-          </p>
-
-          <div class="hero-cta">
-            <a href="about.html" class="btn btn-secondary">Read Our Full Story</a>
-          </div>
+        <h2 class="section-title">About Mavagu Tech</h2>
+        <p class="about-description">
+          Mavagu Tech LLC helps individuals and small businesses modernize with practical, affordable tech.
+          We build software, automate workflows, and provide on-site IT and PC services in the Laredo, Texas area.
+        </p>
+        <p class="about-description">
+          Our team brings software engineering experience and an applied research background, so you get solutions
+          that are reliable, secure, and designed to scale with your needs.
+        </p>
+        <div class="hero-cta">
+          <a href="about.html" class="btn btn-secondary">Read Our Full Story</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section (summary grid + CTA BELOW grid) -->
-  <div class="services-grid">
-          <div class="service-card">
-            <h3 class="service-title">Software Development</h3>
-            <p class="service-description">
-              Custom websites, apps, and business tools built around your workflow.
-            </p>
-          </div>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Our Services</h2>
 
-          <div class="service-card">
-            <h3 class="service-title">IT Consulting</h3>
-            <p class="service-description">
-              Clear guidance to help you choose and implement the right technology.
-            </p>
-          </div>
-
-          <div class="service-card">
-            <h3 class="service-title">AI Tools &amp; Automation</h3>
-            <p class="service-description">
-              Automated workflows that save time, reduce errors, and keep work consistent.
-            </p>
-          </div>
-
-          <div class="service-card">
-            <h3 class="service-title">Managed Services</h3>
-            <p class="service-description">
-              Ongoing support to keep your systems reliable, secure, and running smoothly.
-            </p>
-          </div>
-
-          <div class="service-card">
-            <h3 class="service-title">PC Support &amp; Performance</h3>
-            <p class="service-description">
-              Repairs, upgrades, optimization, and small office tech setup.
-            </p>
-          </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 class="service-title">Software Development</h3>
+          <p class="service-description">
+            Custom websites, apps, and business tools built around your workflow.
+          </p>
         </div>
 
-      <!-- CTA moved OUT of the grid -->
+        <div class="service-card">
+          <h3 class="service-title">IT Consulting</h3>
+          <p class="service-description">
+            Clear guidance to help you choose and implement the right technology.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">AI Tools &amp; Automation</h3>
+          <p class="service-description">
+            Automated workflows that save time, reduce errors, and keep work consistent.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">Managed Services</h3>
+          <p class="service-description">
+            Ongoing support to keep your systems reliable, secure, and running smoothly.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">PC Support &amp; Performance</h3>
+          <p class="service-description">
+            Repairs, upgrades, optimization, and small office tech setup.
+          </p>
+        </div>
+      </div>
+
       <div class="services-cta">
         <a href="service.html" class="btn btn-secondary">View All Services</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- Social Media Cards Section -->
+   <section class="social-cards">
   <div class="container">
-    <div class="footer-content">
-      <div class="footer-brand">
-        <a href="index.html" class="logo" aria-label="Mavagu Tech Home">
-          <span class="logo-text">Mavagu</span><span class="logo-accent">Tech</span>
-        </a>
-        <p>Innovative technology solutions for everyday users and businesses.</p>
+    <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Connect With Us</h2>
+
+    <div class="cards-container">
+      <!-- Facebook -->
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="#fff">
+                <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691V11.01h3.13V8.309c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.314h3.587l-.467 3.696h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <h3>
+              <a href="https://facebook.com/share/17Gwd9h2pp/?mibextid=wwXlfr" target="_blank" rel="noopener">Facebook</a>
+            </h3>
+            <p>Follow us on Facebook for updates, tips, and announcements.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="service.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <!-- Instagram -->
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="#fff">
+                <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm9 2h-9A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9A3.5 3.5 0 0 0 20 16.5v-9A3.5 3.5 0 0 0 16.5 4zm-4.5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.75 6.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <h3>
+              <a href="https://instagram.com/mavagutech" target="_blank" rel="noopener">@mavagutech</a>
+            </h3>
+            <p>Follow us on Instagram to see our latest projects, and tech tips on Instagram.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-links">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="service.html">Software Development</a></li>
-          <li><a href="service.html">IT Consulting</a></li>
-          <li><a href="service.html">AI Tools & Automation</a></li>
-          <li><a href="service.html">Managed Services</a></li>
-          <li><a href="service.html">PC Support & Performance</a></li>
-        </ul>
+      <!-- TikTok -->
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="#fff">
+                <path d="M21 8.5c-1.9 0-3.7-.7-5.1-2V15c0 3.9-3.1 7-7 7s-7-3.1-7-7 3.1-7 7-7c.4 0 .8 0 1.2.1v3.8c-.4-.1-.8-.2-1.2-.2-1.9 0-3.4 1.5-3.4 3.4S7.1 18.4 9 18.4s3.4-1.5 3.4-3.4V2h3.7c.3 2.6 2.5 4.6 5.2 4.8v1.7z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <h3>
+              <a href="https://tiktok.com/@mavagutech" target="_blank" rel="noopener">@mavagutech</a>
+            </h3>
+            <p>Follow us on TikTok for quick tech tips, tutorials, and clips made for you</p>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 Mavagu Tech LLC. All rights reserved.</p>
     </div>
   </div>
-</footer>
+</section>
+
+   
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Mavagu Tech Home">
+            <span class="logo-text">Mavagu</span><span class="logo-accent">Tech</span>
+          </a>
+          <p>Innovative technology solutions for everyday users and businesses.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="service.html">Software Development</a></li>
+            <li><a href="service.html">IT Consulting</a></li>
+            <li><a href="service.html">AI Tools & Automation</a></li>
+            <li><a href="service.html">Managed Services</a></li>
+            <li><a href="service.html">PC Support & Performance</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mavagu Tech LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
