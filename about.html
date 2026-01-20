@@ -19,7 +19,7 @@
         <img src="images/logo.png" alt="Mavagu Tech" class="logo-img" />
       </a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="hamburger"></span>
       </button>
 
@@ -73,6 +73,7 @@
           <div class="about-sidebar">
             <div class="values-card">
               <h3>Our Values</h3>
+
               <div class="value-item">
                 <div class="value-content">
                   <h4>Innovation</h4>
@@ -100,6 +101,7 @@
                   <p>We succeed when our clients succeed.</p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -174,7 +176,7 @@
             </div>
             <div class="team-card-body">
               <p>
-                Irwing De Luna graduated from Texas A&M International University in December 2025 with a degree in Computer Engineering. 
+                Irwing De Luna graduated from Texas A&M International University in December 2025 with a degree in Computer Engineering.
                 He brings hands-on experience from working with the Office of Technology, where he provided computer support, system troubleshooting, and technical assistance.
               </p>
               <p>
@@ -240,21 +242,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    // Close menu when clicking a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-      });
-    });
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
