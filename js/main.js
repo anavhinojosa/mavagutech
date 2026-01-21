@@ -6,9 +6,6 @@
   document.addEventListener("DOMContentLoaded", () => {
     /* =========================
        NAV: Mobile menu toggle
-       - adds aria-expanded
-       - closes on outside click
-       - closes on link click
     ========================== */
     const navToggle = document.querySelector(".nav-toggle");
     const navMenu = document.querySelector(".nav-menu");
@@ -41,7 +38,6 @@
         navToggle.setAttribute("aria-expanded", "false");
       }
 
-      // Use click (simple + consistent). Pointerdown is OK too, but mixing types can be weird.
       navToggle.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -68,8 +64,6 @@
 
     /* =========================
        Smooth scroll (same-page anchors only)
-       - ignores plain "#"
-       - ignores links to other pages
     ========================== */
     document
       .querySelectorAll('a[href^="#"]:not([href="#"])')
@@ -86,7 +80,6 @@
           const navbar = document.querySelector(".navbar");
           const navH = navbar ? navbar.offsetHeight : 0;
 
-          // More robust than offsetTop in complex layouts
           const y =
             targetEl.getBoundingClientRect().top + window.pageYOffset - navH;
 
@@ -99,9 +92,6 @@
 
     /* =========================
        Navbar shadow on scroll
-       - toggles a class instead of inline styles
-       NOTE: add this CSS:
-         .navbar.is-scrolled { box-shadow: var(--shadow-md); }
     ========================== */
     const navbar = document.querySelector(".navbar");
     if (navbar) {
@@ -114,8 +104,6 @@
 
     /* =========================
        Contact form (EmailJS)
-       - works with #contactForm OR .contact-form
-       - avoids double-binding
     ========================== */
     const contactForm =
       document.getElementById("contactForm") ||
