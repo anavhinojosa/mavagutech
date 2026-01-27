@@ -1,0 +1,5 @@
+Primary blue (links, CTAs): #1F4ED8
+Deep blue (headings): #0F2A44
+White (Main Background): #FFFFFF
+Light Gray (Section Backgrounds): #F4F6F8
+Black (Body Text): #000000
