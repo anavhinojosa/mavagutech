@@ -10,12 +10,14 @@
     const navToggle = document.querySelector(".nav-toggle");
     const navMenu = document.querySelector(".nav-menu");
     const navLinks = document.querySelectorAll(".nav-link");
+    const navOverlay = document.querySelector(".nav-overlay");
 
     const closeMenu = () => {
       if (!navMenu || !navToggle) return;
       navMenu.classList.remove("active");
       navToggle.classList.remove("active");
       navToggle.setAttribute("aria-expanded", "false");
+      if (navOverlay) navOverlay.classList.remove("active");
     };
 
     const openMenu = () => {
@@ -23,6 +25,7 @@
       navMenu.classList.add("active");
       navToggle.classList.add("active");
       navToggle.setAttribute("aria-expanded", "true");
+      if (navOverlay) navOverlay.classList.add("active");
     };
 
     const toggleMenu = () => {
@@ -48,6 +51,10 @@
       navLinks.forEach((link) => {
         link.addEventListener("click", () => closeMenu());
       });
+
+      if (navOverlay) {
+        navOverlay.addEventListener("click", () => closeMenu());
+      }
 
       // Close menu when clicking outside
       document.addEventListener("click", (e) => {

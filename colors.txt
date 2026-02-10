@@ -3,5 +3,4 @@ Black: #000000
 
 Gold: #D4AF37
 
-
 White: #FFFFFF
