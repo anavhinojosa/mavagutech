@@ -117,6 +117,7 @@
       document.querySelector("form.contact-form");
 
     // === EmailJS CONFIG (your values) ===
+    
     const EMAILJS_PUBLIC_KEY = "Dix7lm4DQPSv9IOOc";
     const EMAILJS_SERVICE_ID = "service_0888kdg";
     const TEMPLATE_ID_OWNER = "template_l6tuv2t"; // owner
@@ -224,6 +225,14 @@
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
           showNotification("Please enter a valid email address.", "error");
+          return;
+        }
+
+        const token =
+          document.querySelector('input[name="cf-turnstile-response"]')?.value || "";
+
+        if (!token) {
+          showNotification("Please complete the captcha.", "error");
           return;
         }
 
