@@ -245,7 +245,7 @@
           await initEmailJS();
 
           const ownerParams = {
-            to_email: "info@mavagutech.com",
+            to_email: "mavagutech@gmail.com",
             from_name: name,
             reply_to: email,
             subject,
