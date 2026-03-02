@@ -1038,6 +1038,8 @@ section {
 .footer .logo {
   margin-bottom: 1rem;
   font-size: 1.25rem;
+  display: inline-flex;
+  align-items: baseline;
 }
 
 .footer .logo-img {
@@ -1046,11 +1048,42 @@ section {
 
 .footer .logo-text {
   color: #ffffff;
-  margin-right: 0.5px;
+  margin-right: 0.35ch;
 }
 
 .footer .logo-accent {
   color: var(--accent-color);
+}
+
+.footer .logo.typewriter-active {
+  position: relative;
+  padding-right: 0.2em;
+}
+
+.footer .logo.typewriter-active::after {
+  content: "";
+  width: 2px;
+  height: 1.05em;
+  margin-left: 0.08em;
+  align-self: center;
+  background-color: var(--accent-color);
+  animation: footer-caret-blink 0.8s steps(1, end) infinite;
+}
+
+.footer .logo.typewriter-complete::after {
+  animation: footer-caret-blink 0.8s steps(1, end) 3 forwards;
+}
+
+@keyframes footer-caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .footer-brand p {

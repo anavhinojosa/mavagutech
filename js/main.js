@@ -110,6 +110,69 @@
     }
 
     /* =========================
+       Footer logo typewriter
+    ========================== */
+    const footerLogos = document.querySelectorAll(".footer .logo[data-typewriter]");
+    if (footerLogos.length) {
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      footerLogos.forEach((logo) => {
+        if (logo.dataset.typewriterInitialized === "true") return;
+
+        const logoText = logo.querySelector(".logo-text");
+        const logoAccent = logo.querySelector(".logo-accent");
+        if (!logoText || !logoAccent) return;
+
+        const primaryText = logoText.textContent.trim();
+        const accentText = logoAccent.textContent.trim();
+        if (!primaryText || !accentText) return;
+
+        logo.dataset.typewriterInitialized = "true";
+        logo.classList.add("typewriter-active");
+
+        if (prefersReducedMotion) {
+          logo.classList.add("typewriter-complete");
+          return;
+        }
+
+        const typingSpeed = Number(logo.dataset.typewriterSpeed) || 110;
+        const startDelay = Number(logo.dataset.typewriterDelay) || 250;
+        const fullText = `${primaryText} ${accentText}`;
+
+        logoText.textContent = "";
+        logoAccent.textContent = "";
+
+        let index = 0;
+
+        const typeNext = () => {
+          if (index >= fullText.length) {
+            logo.classList.add("typewriter-complete");
+            return;
+          }
+
+          const character = fullText[index];
+
+          if (index < primaryText.length) {
+            logoText.textContent += character;
+          } else if (character !== " ") {
+            logoAccent.textContent += character;
+          }
+
+          index += 1;
+
+          window.setTimeout(
+            typeNext,
+            character === " " ? Math.max(typingSpeed - 30, 40) : typingSpeed
+          );
+        };
+
+        window.setTimeout(typeNext, startDelay);
+      });
+    }
+
+    /* =========================
        Contact form (EmailJS)
     ========================== */
     const contactForm =
