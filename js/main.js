@@ -118,21 +118,23 @@
         "(prefers-reduced-motion: reduce)"
       ).matches;
 
-      footerLogos.forEach((logo) => {
-        if (logo.dataset.typewriterInitialized === "true") return;
+      const startFooterTypewriter = (logo) => {
+        if (logo.dataset.typewriterStarted === "true") return;
 
         const logoText = logo.querySelector(".logo-text");
         const logoAccent = logo.querySelector(".logo-accent");
         if (!logoText || !logoAccent) return;
 
-        const primaryText = logoText.textContent.trim();
-        const accentText = logoAccent.textContent.trim();
+        const primaryText = logo.dataset.typewriterPrimary || logoText.textContent.trim();
+        const accentText = logo.dataset.typewriterAccent || logoAccent.textContent.trim();
         if (!primaryText || !accentText) return;
 
-        logo.dataset.typewriterInitialized = "true";
+        logo.dataset.typewriterStarted = "true";
         logo.classList.add("typewriter-active");
 
         if (prefersReducedMotion) {
+          logoText.textContent = primaryText;
+          logoAccent.textContent = accentText;
           logo.classList.add("typewriter-complete");
           return;
         }
@@ -169,6 +171,61 @@
         };
 
         window.setTimeout(typeNext, startDelay);
+      };
+
+      footerLogos.forEach((logo) => {
+        if (logo.dataset.typewriterInitialized === "true") return;
+
+        const logoText = logo.querySelector(".logo-text");
+        const logoAccent = logo.querySelector(".logo-accent");
+        if (!logoText || !logoAccent) return;
+
+        const primaryText = logoText.textContent.trim();
+        const accentText = logoAccent.textContent.trim();
+        if (!primaryText || !accentText) return;
+
+        logo.dataset.typewriterInitialized = "true";
+        logo.dataset.typewriterPrimary = primaryText;
+        logo.dataset.typewriterAccent = accentText;
+
+        if (prefersReducedMotion) {
+          return;
+        }
+
+        logoText.textContent = "";
+        logoAccent.textContent = "";
+
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                startFooterTypewriter(logo);
+                observer.unobserve(entry.target);
+              });
+            },
+            {
+              threshold: 0.45,
+            }
+          );
+
+          observer.observe(logo);
+          return;
+        }
+
+        const triggerWhenVisible = () => {
+          const rect = logo.getBoundingClientRect();
+          const visibleHeight = window.innerHeight || document.documentElement.clientHeight;
+          if (rect.top <= visibleHeight * 0.8 && rect.bottom >= 0) {
+            startFooterTypewriter(logo);
+            window.removeEventListener("scroll", triggerWhenVisible);
+            window.removeEventListener("resize", triggerWhenVisible);
+          }
+        };
+
+        window.addEventListener("scroll", triggerWhenVisible, { passive: true });
+        window.addEventListener("resize", triggerWhenVisible);
+        triggerWhenVisible();
       });
     }
 
